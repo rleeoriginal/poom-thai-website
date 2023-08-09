@@ -2,23 +2,60 @@
     <head>
         <meta charset="utf-8">
         <title> Poom Thai Cuisine </title>
+        <script src="js/script.js" defer></script>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
         <div id="header">
+            <div class="line"></div>
             <div id="logo">
                 <img src="src/logo.png" alt="Resturant Logo">
             </div>
             <div id="title">Poom Thai Cuisine</div>
-        </div>
+            <div class="line"></div>
+        </div> 
         <div id="main-body">
             <div id="main-photo">
-                <button> Menu </button>
-                <button> Delivery Order </button>
+                <div id="buttons">
+                    <div class="button-style" id="menu" onclick="navigateToMenu()"> Menu </div>
+                    <div id="dropdown">
+                        <div class="button-style" id="delivery"> Delivery Order </div>
+                        <div id="dropdown-content">
+                            <a href="https://www.doordash.com/store/poom-thai-cuisine-santa-monica-78008/">DoorDash</a>
+                            <a href="https://postmates.com/store/poom-thai-cuisine/qOfP_swRQLaYs_U9bA8NSQ">Postmates</a>
+                            <a href="https://www.ubereats.com/store/poom-thai-cuisine/qOfP_swRQLaYs_U9bA8NSQ">Uber Eats</a>
+                            <a href="https://www.grubhub.com/restaurant/poom-thai-2204-lincoln-blvd-ste-a-santa-monica/289536">GrubHub</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="photo-body"></div>
-        <div id="footer"></div>
+        <div id="photo-body">
+            <div class="section">
+                <div class="frame" id="photo1"></div>
+        
+            </div>
+            <div class="section">
+                <div class="frame" id="photo2"></div>
+                
+            </div>
+            <div class="section">
+                <div class="frame" id="photo3"></div>
+
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="modal" id="hours">
+                Hours <br> Mon-Sun <br> 5PM-1AM
+            </div>
+            <div class="modal" id="address">
+                2204 Lincoln Blvd <br> Suite A, Santa Monica, CA, 90025 <br> (310)-450-2150
+            </div>
+            <div class="modal" id="map" onclick="navigateToMap()">
+                Click for <br> Google Map
+            </div>
+        </div>
     </body>
 </html>
