@@ -1,5 +1,12 @@
 /* css styles for main page */
 
+@media (max-width: 300px) {
+    .frame {
+        height: 100px;
+        width: 100px;
+    }
+}
+
 body {
     font-family: monospace, Helvetica, sans-serif;
     background-color: #FAF3F0;
@@ -10,33 +17,56 @@ body {
 }
 
 img {
+    min-width: 100px;
+    min-height: 100px;
     max-width: 100%;
-    max-height: 100%;
+    max-height: auto;
 }
 
-#header {
-    background-color: #EDF1D6;
+button {
+    font-family: inherit;
+    height: 3em;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
     background-color: #FAF3F0;
-    min-height: 100px;
+
+    width: 100%;
+}
+
+
+#header {
+    background-color: #FAF3F0;
+    
+    height: 15vh;
     
     padding: 10px;
     border-color: black;
     border-width: 10px;
 
-    position: relative;
-
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
 
-
+ 
 
 }
 
-#logo {
-    height: 100px;
-    width: 100px;
+.line {
+    height: 1px;
+    width: 25%;
+    background: #609966;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
-    position: absolute;
+#logo {
+    max-height: 100px;
+    max-width: 100px;
+
+    
 }
 
 #title {
@@ -44,10 +74,8 @@ img {
     color: #609966;
     text-shadow: #40513B 3px 3px 1px;
 
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
-    padding-right: 100px;
+    white-space: nowrap;
+
     
 }
 
@@ -60,22 +88,171 @@ img {
     background-repeat: no-repeat;
     background-position: 50% 60%;
 
-    border-radius: 75px;
 
 }
 
 #main-photo {
-    object-fit: contain;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#buttons {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+    margin-top: 30%;
+}
+
+.button-style {
+    background-color: #FAF3F0;
+    height: 2.5em;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+#dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #FAF3F0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+/* Links inside the dropdown */
+#dropdown-content a {
+    text-decoration: none;
+    display: block;
+
+
+    height: 40px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+    color: black;
+}
+
+/* Show the dropdown menu on hover */
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+#menu:hover, #delivery:hover, #dropdown-content a:hover {
+    background-color: #e0d9d5;
+}
+
+
 #photo-body {
-    background-color: #EDF1D6;
     background-color: #FAF3F0;
     flex: 1 1 0;
     min-height: 50vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.section {
+    height: 80%;
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    
+    
+}
+
+.frame {
+    height: 100%;
+    width: 100%;
+
+
+}
+
+
+
+.quote {
+    text-align: center;
+}
+
+#photo1 {
+    background-image: url("../src/wall1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+}
+
+#photo2 {
+    background-image: url("../src/wall2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+}
+
+#photo3 {
+    background-image: url("../src/wall3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+}
+
 
 #footer {
     background-color: #40513B;
-    min-height: 15vh;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.modal {
+    background-color: #FAF3F0;
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 20px;
+}
+
+#map:hover {
+    background-color: #e0d9d5;
+    cursor: pointer;
 }
