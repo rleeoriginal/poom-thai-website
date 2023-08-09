@@ -1,0 +1,81 @@
+/* css styles for main page */
+
+body {
+    font-family: monospace, Helvetica, sans-serif;
+    background-color: #FAF3F0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#header {
+    background-color: #EDF1D6;
+    background-color: #FAF3F0;
+    min-height: 100px;
+    
+    padding: 10px;
+    border-color: black;
+    border-width: 10px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+
+    position: absolute;
+}
+
+#title {
+    font-size: 50px;
+    color: #609966;
+    text-shadow: #40513B 3px 3px 1px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+
+#main-body {
+    flex: 1 1 0;
+    min-height: 100vh;
+
+    background-image: url("../src/resturant.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+
+    border-radius: 75px;
+
+}
+
+#main-photo {
+    object-fit: contain;
+}
+
+#photo-body {
+    background-color: #EDF1D6;
+    background-color: #FAF3F0;
+    flex: 1 1 0;
+    min-height: 50vh;
+}
+
+#footer {
+    background-color: #40513B;
+    min-height: 15vh;
+}
