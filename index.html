@@ -9,14 +9,22 @@
     <body>
         <div id="header">
             <div class="line"></div>
-            <div id="logo">
-                <img src="src/logo.png" alt="Resturant Logo">
+            <div id="logo-container">
+                <img id="logo" src="src/logo.png" alt="Resturant Logo">
             </div>
-            <div id="title">Poom Thai Cuisine</div>
+           
             <div class="line"></div>
         </div> 
         <div id="main-body">
             <div id="main-photo">
+                <div id="placard">
+                    <div class="line"></div>
+                    <div id="title">Poom Thai Cuisine</div>
+                    <div id="quote"> Open for Takeout and Delivery</div>
+                    <div id="address"> 2204 Lincoln Boulevard #A, Santa Monica, CA, 90025</div>
+                    <div id="phone">(310)-450-2150</div>
+                    <div class="line"></div>
+                </div>
                 <div id="buttons">
                     <div class="button-style" id="menu" onclick="navigateToMenu()"> Menu </div>
                     <div id="dropdown">
@@ -54,7 +62,7 @@
                 2204 Lincoln Blvd <br> Suite A, Santa Monica, CA, 90025 <br> (310)-450-2150
             </div>
             <div class="modal" id="map" onclick="navigateToMap()">
-                Click for <br> Google Map
+                Google Map
             </div>
         </div>
     </body>
